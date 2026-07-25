@@ -724,7 +724,7 @@ window.emailjs = emailjs; })();
         <span id="user-email-bar"></span>
         <button class="btn-logout" id="btn-logout">Cerrar sesión</button>
       </div>
-      <a class="back-link" href="../menu.html">← Menú</a>
+      <a class="back-link" id="back-to-menu" href="../menu.html">← Menú</a>
     </div>
   </div>
 </div>
@@ -4159,6 +4159,12 @@ function doLogout() {
 // abajo intacto por si se necesita reactivar en algún momento — para
 // hacerlo, solo hay que volver a poner esta constante en true y restaurar
 // el HTML de #login-screen / #otp-screen (ver historial del archivo).
+// ── País de origen (para volver al menú correcto) ──────────────
+var _pais = new URLSearchParams(window.location.search).get('pais');
+if (_pais) {
+  document.getElementById('back-to-menu').href = '../menu.html?pais=' + _pais;
+}
+
 var LOGIN_ENABLED = false;
 
 window.addEventListener('DOMContentLoaded', function() {
