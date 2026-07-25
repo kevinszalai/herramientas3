@@ -82,7 +82,7 @@ footer{text-align:center;font-size:11px;color:var(--hint);padding:2rem;border-to
 // ---------------------------------------------------------------
 const TOOLS = [
   { id: 'cobranding',  name: 'Compositor de Cobranding',   desc: 'Generá tu pieza de cobranding con el logo del partner.', url: (pais) => `pais.html?pais=${pais}`, icon: '🎨' },
-  { id: 'tarjetaqr',   name: 'Tarjetas Virtuales con QR',  desc: 'Tarjetas de contacto digitales con QR para ferias y eventos.', url: () => 'tarjetaqr/', icon: '📇' },
+  { id: 'tarjetaqr',   name: 'Tarjetas Virtuales con QR',  desc: 'Tarjetas de contacto digitales con QR para ferias y eventos.', url: (pais) => `tarjetaqr/?pais=${pais}`, icon: '📇' },
   { id: 'coverage',    name: 'Coverage Profile Generator', desc: 'Perfiles de cobertura por producto y mercado.', url: () => '#', icon: '🛡️' },
   { id: 'flyers',      name: 'UA Flyers',                  desc: 'Editor de flyers institucionales.', url: () => '#', icon: '🖼️' },
   { id: 'invitations', name: 'Invitation Editor',          desc: 'Invitaciones para Story y Email.', url: () => '#', icon: '✉️' },
